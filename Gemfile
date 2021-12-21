@@ -77,3 +77,4 @@ end
 # View component
 gem "view_component"
 
+gem "view_component_storybook"
