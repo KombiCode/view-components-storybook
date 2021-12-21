@@ -4,6 +4,8 @@
   "dependencies": {
     "@hotwired/stimulus": "^3.0.1",
     "@hotwired/turbo-rails": "^7.1.0",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-postcss": "^2.0.0",
     "autoprefixer": "^10.4.0",
     "esbuild": "^0.14.6",
     "postcss": "^8.4.5",
@@ -12,6 +14,11 @@
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds",
-    "build:css": "tailwindcss --postcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css"
+    "build:css": "tailwindcss --postcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css",
+    "storybook:build": "build-storybook -o public/_storybook"
+  },
+  "devDependencies": {
+    "@storybook/addon-controls": "^6.4.9",
+    "@storybook/server": "^6.4.9"
   }
 }
